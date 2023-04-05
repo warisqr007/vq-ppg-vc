@@ -1,0 +1,17 @@
+torchaudio
+tqdm
+librosa
+soundfile
+resampy
+pyworld
+PyYAML
+typeguard
+matplotlib
+numpy
+scipy
+webrtcvad
+glob2
+humanfriendly
+torch_complex
+editdistance
+chainer
