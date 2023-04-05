@@ -56,7 +56,7 @@ See conf/
 ./train_vc128_all.sh
 ```
 
-* Training Model 1
+* Training Model 2
 ```
 ./train_vc128_all_prosody_ecapa.sh
 ```
