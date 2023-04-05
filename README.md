@@ -4,6 +4,8 @@
 <!-- Code for this paper [Decoupling segmental and prosodic cues of non-native speech through vector quantization](https://www.isca-speech.org/archive/interspeech_2022/quamer22_interspeech.html)
 
 Waris Quamer, Anurag Das, Ricardo Gutierrez-Osuna -->
+## Block Diagram
+![Block Diagram](./block_diagram.png)
 
 See details here. [Link](https://anonymousis23.github.io/demos/prosody-accent-conversion/)
 
