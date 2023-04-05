@@ -27,7 +27,7 @@ See details here. [Link](https://anonymousis23.github.io/demos/prosody-accent-co
 * Speaker Encoder: [LibriSpeech](https://www.openslr.org/12), see [here](https://github.com/CorentinJ/Real-Time-Voice-Cloning) for detailed training process.
 * Vector Quantization:  [[ARCTIC](http://www.festvox.org/cmu_arctic/) and [L2-ARCTIC](https://psi.engr.tamu.edu/l2-arctic-corpus/), see [here](https://github.com/warisqr007/vq-bnf) for detailed training process.
 * Synthesizer (i.e., Seq2seq model): [ARCTIC](http://www.festvox.org/cmu_arctic/) and [L2-ARCTIC](https://psi.engr.tamu.edu/l2-arctic-corpus/). Please see [here]() for a merged version.
-* Vocoder: [LibriSpeech](https://www.openslr.org/12), see [here](https://github.com/CorentinJ/Real-Time-Voice-Cloning) for detailed training process.
+* Vocoder (HiFiGAN): [LibriSpeech](https://www.openslr.org/12) (Training code to be updated).
 
 All the pretrained the models are available (To be updated) [here](https://drive.google.com/file/d/1RUFXQ9jVXTAgPSukUuWv0TGKGhuaQeeo/view?usp=sharing) 
 
@@ -37,18 +37,20 @@ See [the inference script](inference_script.ipynb)
 
 ## Training
 
-* Use Kaldi to extract BNF for the reference L1 speaker
+* Use Kaldi to extract BNF for individual speakers
 ```
-./kaldi_scripts/extract_features_kaldi.sh /path/to/L2-ARCTIC/BDL
+./kaldi_scripts/extract_features_kaldi.sh /path/to/speaker
 ```
+
 * Preprocessing
 ```
 python synthesizer_preprocess_audio.py /path/to/L2-ARCTIC BDL /path/to/L2-ARCTIC/BDL/kaldi --out_dir=your_preprocess_output_dir
 python synthesizer_preprocess_embeds.py your_preprocess_output_dir
-
-python translator_preprocess_audio.py /path/to/L2-ARCTIC BDL /path/to/L2-ARCTIC/BDL/kaldi --out_dir=your_preprocess_output_dir
-python translator_preprocess_embeds.py your_preprocess_output_dir
 ```
+
+* Vector Quantize the BNFs
+see [here](https://github.com/warisqr007/vq-bnf) 
+
 * Training
 ```
 python translator_train.py PPG2PPG_train your_preprocess_output_dir
