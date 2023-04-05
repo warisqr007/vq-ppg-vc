@@ -41,7 +41,8 @@ See [the inference script](inference_script.ipynb)
 
 * Preprocessing
 ```
-To be Updated
+python preprocess_bnfs.py
+python generate_speaker_embeds.py
 ```
 
 * Vector Quantize the BNFs
