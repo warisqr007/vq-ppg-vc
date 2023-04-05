@@ -5,7 +5,7 @@
 
 Waris Quamer, Anurag Das, Ricardo Gutierrez-Osuna -->
 ## Block Diagram
-![Block Diagram](./block_diagram.png)
+![Block Diagram](./block_diagram.jpg)
 
 See details here. [Link](https://anonymousis23.github.io/demos/prosody-accent-conversion/)
 
