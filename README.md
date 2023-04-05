@@ -10,13 +10,10 @@ Waris Quamer, Anurag Das, Ricardo Gutierrez-Osuna -->
 See details here. [Link](https://anonymousis23.github.io/demos/prosody-accent-conversion/)
 
 ## Installation
-1. Python 3.8
-* Install [PyTorch](https://pytorch.org/get-started/locally/) (>=1.0.1).
-* Install Nvidia version of [TensorFlow 1.15](https://github.com/NVIDIA/tensorflow)
 * Install [ffmpeg](https://ffmpeg.org/download.html#get-packages).
 * Install [Kaldi](https://github.com/kaldi-asr/kaldi)
 * Install [PyKaldi](https://github.com/pykaldi/pykaldi)
-* Run `pip install -r requirements.txt` to install the remaining necessary packages.
+* Install packages using environment.yml file.
 * Download pretrained [TDNN-F model](https://kaldi-asr.org/models/13/0013_librispeech_v1_chain.tar.gz), extract it, and set `PRETRAIN_ROOT` in `kaldi_scripts/extract_features_kaldi.sh` to the pretrained model directory.
 
 
@@ -44,15 +41,21 @@ See [the inference script](inference_script.ipynb)
 
 * Preprocessing
 ```
-python synthesizer_preprocess_audio.py /path/to/L2-ARCTIC BDL /path/to/L2-ARCTIC/BDL/kaldi --out_dir=your_preprocess_output_dir
-python synthesizer_preprocess_embeds.py your_preprocess_output_dir
+To be Updated
 ```
 
 * Vector Quantize the BNFs
 see [here](https://github.com/warisqr007/vq-bnf) 
 
-* Training
+* Setting Training params
+See conf/
+
+* Training Model 1
 ```
-python translator_train.py PPG2PPG_train your_preprocess_output_dir
-python synthesizer_train.py Accetron_train your_preprocess_output_dir
+./train_vc128_all.sh
+```
+
+* Training Model 1
+```
+./train_vc128_all_prosody_ecapa.sh
 ```
