@@ -34,7 +34,7 @@ See [the inference script](inference_script.ipynb)
 
 ## Training
 
-* Use Kaldi to extract BNF for individual speakers
+* Use Kaldi to extract BNF for individual speakers (Do it for all speakers)
 ```
 ./kaldi_scripts/extract_features_kaldi.sh /path/to/speaker
 ```
