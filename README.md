@@ -55,6 +55,7 @@ See [the inference script](inference_script.ipynb)
 ```
 python preprocess_bnfs.py path/to/dataset
 python generate_speaker_embeds.py path/to/dataset
+python make_data_all.py #Edit the file to specify dataset path
 ```
 
 * Vector Quantize the BNFs
