@@ -28,6 +28,18 @@ See details here. [Link](https://anonymousis23.github.io/demos/prosody-accent-co
 
 All the pretrained the models are available (To be updated) [here](https://drive.google.com/file/d/1RUFXQ9jVXTAgPSukUuWv0TGKGhuaQeeo/view?usp=sharing) 
 
+### Directory layout (Format your dataset to match below)
+
+    datatset_root
+    ├── speaker 1
+    ├── speaker 2 
+    │   ├── wav          # contains all the wav files from speaker 2
+    │   └── kaldi        # Kaldi files (auto-generated after running kaldi-scripts
+    .
+    .
+    └── speaker N
+    
+
 ## Quick Start
 
 See [the inference script](inference_script.ipynb)
